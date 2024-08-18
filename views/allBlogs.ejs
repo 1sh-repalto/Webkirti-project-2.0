@@ -1,0 +1,62 @@
+<div class="allBlogsPage">
+  <header class="header">
+    <div class="left">
+      <a href="/" class="header_logo">Logo Here</a>
+
+      <div class="header_button">
+        <button class="search_button" aria-expanded="false">
+          Search
+          <svg
+            width="17"
+            height="17"
+            viewBox="0 0 17 17"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M7.79167 13.4583C10.9213 13.4583 13.4583 10.9213 13.4583 7.79167C13.4583 4.66205 10.9213 2.125 7.79167 2.125C4.66205 2.125 2.125 4.66205 2.125 7.79167C2.125 10.9213 4.66205 13.4583 7.79167 13.4583Z"
+              stroke="black"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M14.875 14.875L11.7938 11.7938"
+              stroke="black"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <div class="allBlogsPage-nav">
+      <a href="/write">Write</a>
+      <a href="/profile">Profile</a>
+    </div>
+  </header>
+
+  <div class="blog-container">
+    <h2 class="articles-heading">Latest Posts</h2>
+    <section class="articles">
+      <div class="blog-list">
+        <% data.forEach(post => { %>
+       
+          <a href="/post/<%= post._id %>">
+            <div class="blog-element">
+              <div class="blog-info">
+                <h1><%= post.title %></h1>
+              </div>
+              <h4 class="blog-element-date"><%= post.createdAt.toDateString() %></h4>
+            </div>
+          </a>
+    
+          <% }) %>
+      </div>
+
+    </section>
+
+  </div>
+</div>

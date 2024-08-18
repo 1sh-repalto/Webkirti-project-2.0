@@ -1,0 +1,342 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #F2F1F0;
+  color: #212121;
+  font-family: Montserrat;
+}
+
+.container {
+  height: 100vh;
+  width: 100vw;
+}
+
+/* SEARCHBAR */
+.searchBar {
+  visibility: hidden;
+  transform: translateY(-100px);
+  height: 10vh;
+  width: 100vw;
+  background-color: #212121;
+  padding: 2vh 0;
+  position: absolute;
+  left: 0;
+  right: 0;
+  transition: transform 0.3s ease;
+}
+
+.searchBar-container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.searchBar.open {
+  transform: translateY(0);
+  transition: transform 0.3s ease;
+}
+
+.searchBar input {
+  height: 40px;
+  width: 300px;
+  padding: 0 10px;
+  border-radius: 100px;
+  border: none;
+  outline: none;
+}
+
+#searchClose {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 15px;
+  color: #F2F1F0;
+}
+/* SEARCHBAR */
+
+/* HEADER */
+.header {
+  height: 10vh;
+  width: 100%;
+  padding: 0 5vw;
+  border: solid 1px #212121;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header .left {
+  height: 100%;
+  width: 25vw;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.header nav {
+  height: 100%;
+  width: 35vw;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.header nav a {
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: #212121;
+  font-weight: 600;
+  border-bottom: solid 2px #F2F1F0;
+  transition: all 0.2s ease;
+}
+.header nav a:hover {
+  border-bottom: solid 2px #212121;
+}
+/* HEADER */
+
+.main {
+  height: 100%;
+  width: 100%;
+}
+
+/* LANDING PAGE */
+.landing-page {
+  height: 80vh;
+  width: 100%;
+  padding-top: 14vh;
+  padding-bottom: 6vh;
+}
+
+.birds {
+  position: fixed;
+  right: 17%;
+  top: 12%;
+}
+
+.landing-page-about{
+  height: 60vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.landing-page-about h1 {
+  font-size: 5em;
+  font-weight: 600;
+  z-index: 1;
+}
+
+.landing-page-about h2 {
+  font-size: 2em;
+  font-weight: 500;
+  margin: 15px 0;
+}
+
+.start-blogging-button {
+  padding: 15px 30px;
+  font-size: 1.5rem;
+  color: #F2F1F0;
+  background-color: #212121;
+  border: solid 1px #212121;
+  border-radius: 100px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.start-blogging-button:hover {
+  background-color: #F2F1F0;
+  color: #212121;
+  box-shadow: 0 0 5px #212121;
+}
+
+.start-blogging-button:active {
+  box-shadow: none;
+}
+
+.landing-page-about p{
+  font-size: 1em;
+  font-weight: 400;
+  margin-top: 8px;
+}
+/* LANDING PAGE */
+
+/* SIGN UP PAGE */
+.signup-page, .login-page {
+  height: 100%;
+  width: 100%;
+  padding: 5% 10%;
+}
+
+.signup-container, .login-container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.signup-page-header, .login-page-header {
+  height: 20%;
+  width: 100%;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.signup-page-header a, .login-page-header a{
+  color: royalblue;
+  text-decoration: none;
+  opacity: 0.8;
+  transition: all 0.2s ease;
+}
+
+.signup-page-header a:hover, .login-page-header a:hover{
+  text-decoration: underline;
+  opacity: 1;
+  cursor: pointer;
+}
+
+.signup-page form, .login-page form {
+  height: 80%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.signup-page input, .login-page input {
+  height: 50px;
+  width: 300px;
+  font-size: 1.2rem;
+  border: none;
+  border-bottom: solid 1px #212121;
+  outline:none;
+  background: transparent;
+}
+
+.signup-page button, .login-page button {
+  padding: 15px 30px;
+  font-size: 1.5rem;
+  color: #F2F1F0;
+  background-color: #212121;
+  border: solid 1px #212121;
+  border-radius: 100px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.signup-page button:hover, .login-page button:hover {
+  background-color: #F2F1F0;
+  color: #212121;
+  box-shadow: 0 0 5px #212121;
+  cursor: pointer;
+}
+
+.signup-page button:active, .login-page button:active {
+  box-shadow: none;
+}
+/* SIGN UP PAGE */
+
+/* ALLBLOGS PAGE */
+.allBlogsPage-nav {
+  height: 100%;
+  width: 25vw;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.allBlogsPage {
+  min-height: 100vh;
+  width: 100vw;
+}
+
+.blog-container {
+  min-height: 90vh;
+  width: 100%;
+}
+
+.blog-container h2 {
+  height: 15vh;
+  width: 100%;
+  text-align: center;
+  padding: 30px 0;
+  font-size: 3rem;
+}
+
+.articles {
+  min-height: 75vh;
+  width: 60%;
+  margin: 0 auto;
+}
+
+.articles a {
+  text-decoration: none;
+}
+
+.blog-list {
+  height: 100%;
+  width: 100%;
+}
+
+.blog-element {
+  color: #212121;
+  height: 15vh;
+  width: 100%;
+  border-bottom: solid 1px silver;
+  display: flex;
+  align-items: center;
+}
+
+.blog-info {
+  height: 100%;
+  width: 90%;
+  display: flex;
+  align-items: center;
+}
+
+.blog-element-date {
+  height: 100%;
+  width: 15vw;
+  display: flex;
+  align-items: center;
+}
+/* ALLBLOGS PAGE */
+
+/* SEARCH RESULTS */
+.search-res {
+  padding-top: 10vh;
+}
+
+.search-res h2 {
+  height: 15vh;
+  width: 100%;
+  text-align: center;
+  padding: 30px 0;
+  font-size: 3rem;
+}
+/* SEARCH RESULTS */
+
+/* FOOTER */
+.footer {
+  height: 10vh;
+  width: 100%;
+  border: solid 1px #212121;
+}
+/* FOOTER */
+
+/* @media screen and (max-width: 900px) {
+  .signup-page-header {
+    font-size: 1.5rem;
+  }
+} */
